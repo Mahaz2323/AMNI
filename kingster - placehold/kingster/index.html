@@ -195,7 +195,7 @@
                 </div>
             </header>
             <div class="kingster-page-wrapper" id="kingster-page-wrapper">
-                <div class="gdlr-core-page-builder-body">
+                <div class="gdlr-core-page-builder-body" style="padding-bottom: 30px;">
                     <div class="gdlr-core-pbf-wrapper " style="padding: 0px 0px 0px 0px;">
                         <div class="gdlr-core-pbf-background-wrap" style="background-color: #191919 ;"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
@@ -262,6 +262,75 @@
                             </div>
                     </div>
                     <div class="gdlr-core-pbf-wrapper  hp1-col-services"  data-skin="Blue Title" id="gdlr-core-wrapper-1" style="padding-top: 30px; width: 100%;">
+                        
+    <div class="container-fluid" style="background-color: #ffffff; width: 100%; padding: 0; border-bottom: 1px solid #ddd;">
+  <div class="row" style="margin: 0; display: flex; align-items: center; flex-wrap: wrap;">
+    
+    <!-- Button -->
+    <div class="col-auto" style="padding: 10px;">
+      <button class="latest-btn" style="width: 150px; height: 40px; font-weight: bold; border: none; background-color: #51be78; color: white; transition: background-color 0.3s ease;">
+        Latest Updates
+      </button>
+    </div>
+    
+    <!-- Scrolling News Text -->
+    <div class="col" style="overflow: hidden; white-space: nowrap; padding: 10px 0; position: relative;">
+      <div 
+        class="ticker-container"
+        style="
+          display: inline-block;
+          padding-left: 100%;
+          animation: ticker 20s linear infinite;
+          white-space: nowrap;
+        "
+        onmouseover="this.style.animationPlayState='paused';"
+        onmouseout="this.style.animationPlayState='running';"
+      >
+        <span style="margin-right: 50px; color: black;">
+          Admissions open Generic BSN (04 years Degree Program)
+          Qualification: Matric Science (Physics, Chemistry & Biology) | FSc Pre-Medical with 50% marks
+          <span style='height: 6px; width: 6px; background-color: black; border-radius: 50%; display: inline-block; margin: 0 10px;'></span>
+        </span>
+        <span style="margin-right: 50px; color: black;">
+          Admissions Open BS MLT and BS Anesthesia
+          <span style='height: 6px; width: 6px; background-color: black; border-radius: 50%; display: inline-block; margin: 0 10px;'></span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS: Hover + Animation + Responsive -->
+<style>
+  /* Hover effect for Latest Updates button */
+  .latest-btn:hover {
+    background-color: black !important;
+    color: white !important;
+  }
+
+  /* Scrolling animation */
+  @keyframes ticker {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Responsive Design for Mobile */
+  @media (max-width: 576px) {
+    .latest-btn {
+      width: auto !important;
+      font-size: 14px !important;
+      padding: 5px 10px !important;
+    }
+
+    .ticker-container span {
+      font-size: 13px !important;
+    }
+  }
+</style>
+
+<news-events></news-events>
+
+
                         <div class="gdlr-core-pbf-background-wrap"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
