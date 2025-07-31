@@ -481,6 +481,8 @@ We are looking for passionate, caring, and committed future healthcare professio
                 </div>
             </div>
         </div>
+<!-- ✅ Include MixItUp JS Library -->
+<script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
 <style>
         .menu-main-navigation {
             display: flex;
@@ -495,7 +497,7 @@ We are looking for passionate, caring, and committed future healthcare professio
         .menu-main-navigation a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
         }
         .menu-main-navigation a:hover {
@@ -503,18 +505,22 @@ We are looking for passionate, caring, and committed future healthcare professio
         }
 </style>
         <section id="filter">
-  <div class="menu-main-navigation">
-    <ul style="display: inline-flex; list-style: none; padding: 0; gap: 10px;">
-      <li><a class="filter active" href="admission.html#filter" data-filter="all">ALL</a></li>
-      <li><a class="filter" href="admission.html#filter-pandemic" data-filter=".filter-pandemic">BS Nursing</a></li>
-      <li><a class="filter" href="admission.html#filter" data-filter=".filter-vaccine">Doctor of Pharmacy (Pharm-D)</a></li>
-      <li><a class="filter" href="admission.html#filter" data-filter=".filter-pediatric">BS Medical and Lab Technology</a></li>
-      <li><a class="filter" href="admission.html#filter" data-filter=".filter-drug">BS Anesthesia</a></li>
-      <li><a class="filter" href="admission.html#filter" data-filter=".filter-surgery">Pharmacy Technician CAT-B</a></li>
-      <li><a class="filter" href="admission.html#filter" data-filter=".filter-medical">Lady Health Visitor</a></li>
-      <li><a class="filter" href="#" data-filter=".filter-MidWife">Community MidWife</a></li>
-    </ul>
-  </div>
+
+
+<!-- ✅ Menu Filters -->
+<div class="menu-main-navigation">
+  <ul style="display: inline-flex; list-style: none; padding: 0; gap: 10px;">
+    <li><a class="filter active" href="admission.html#all" data-filter="all">ALL</a></li>
+    <li><a class="filter" href="admission.html#pandemic" data-filter=".filter-pandemic">BS Nursing</a></li>
+    <li><a class="filter" href="admission.html#vaccine" data-filter=".filter-vaccine">Doctor of Pharmacy (Pharm-D)</a></li>
+    <li><a class="filter" href="admission.html#pediatric" data-filter=".filter-pediatric">BS Medical and Lab Technology</a></li>
+    <li><a class="filter" href="admission.html#drug" data-filter=".filter-drug">BS Anesthesia</a></li>
+    <li><a class="filter" href="admission.html#surgery" data-filter=".filter-surgery">Pharmacy Technician CAT-B</a></li>
+    <li><a class="filter" href="admission.html#medical" data-filter=".filter-medical">Lady Health Visitor</a></li>
+    <li><a class="filter" href="admission.html#MidWife" data-filter=".filter-MidWife">Community MidWife</a></li>
+  </ul>
+</div>
+
 
   <style>
     #filtered-items {
@@ -545,99 +551,117 @@ We are looking for passionate, caring, and committed future healthcare professio
       color: #50bd77;
     }
   </style>
-  <div id="filtered-items" class="row" >
-    <!-- BS Nursing -->
-    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-pandemic">
-      <div class="service-item">
-        <div class="service-img">
-          <a href="nursing.htm"><img src="assets/catalogue/BsNursing.jpg" alt="BS Nursing"></a>
-        </div>
-        <div class="service-body">
-          <h4 class="service-title"><a href="nursing.htm">Bachelor of Science in Nursing</a></h4>
-        </div>
+  
+<!-- ✅ Filterable Items -->
+<div id="filtered-items" class="row">
+  <!-- BS Nursing -->
+  <div class="col-sm-6 col-md-6 col-lg-4 mix filter-pandemic">
+    <div class="service-item">
+      <div class="service-img">
+        <a href="nursing.htm"><img src="assets/catalogue/BsNursing.jpg" alt="BS Nursing"></a>
       </div>
-    </div>
-
-    <!-- Pharm-D -->
-    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-vaccine">
-      <div class="service-item">
-        <div class="service-img">
-          <a href="Pharm. D.html"><img src="assets/catalogue/phramd.jpg" alt="Pharm-D"></a>
-        </div>
-        <div class="service-body">
-          <h4 class="service-title"><a href="Pharm. D.html">Doctor of Pharmacy (Pharm-D)</a></h4>
-        </div>
-      </div>
-    </div>
-
-    <!-- Medical Lab Tech -->
-    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-pediatric">
-      <div class="service-item">
-        <div class="service-img">
-          <a href="BsLaboratory.html"><img src="assets/catalogue/Mediacal lab tech.jpg" alt="Lab Tech"></a>
-        </div>
-        <div class="service-body">
-          <h4 class="service-title"><a href="BsLaboratory.html">BS Medical and Lab Technology</a></h4>
-        </div>
-      </div>
-    </div>
-
-    <!-- Anesthesia -->
-    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-drug">
-      <div class="service-item">
-        <div class="service-img">
-          <a href="BS Anaesthesia.html"><img src="assets/catalogue/anesthisa.jpg" alt="Anesthesia"></a>
-        </div>
-        <div class="service-body">
-          <h4 class="service-title"><a href="BS Anaesthesia.html">BS Anesthesia</a></h4>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pharmacy Technician -->
-    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-surgery">
-      <div class="service-item">
-        <div class="service-img">
-          <a href="Pharm tech B.html"><img src="assets/catalogue/phram tech.jpg" alt="Pharmacy Tech"></a>
-        </div>
-        <div class="service-body">
-          <h4 class="service-title"><a href="Pharm tech B.html">Pharmacy Technician CAT-B</a></h4>
-        </div>
-      </div>
-    </div>
-
-    <!-- Lady Health Visitor -->
-    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-medical">
-      <div class="service-item">
-        <div class="service-img">
-          <a href="ladyHealthVisitor.html"><img src="assets/catalogue/lhv.jpg" alt="Lady Health Visitor"></a>
-        </div>
-        <div class="service-body">
-          <h4 class="service-title"><a href="ladyHealthVisitor.html">Lady Health Visitor</a></h4>
-        </div>
-      </div>
-    </div>
-
-    <!-- Community MidWife -->
-    <div class="col-sm-6 col-md-6 col-lg-4 mix filter-MidWife">
-      <div class="service-item">
-        <div class="service-img">
-          <a href="CommunityMidWife.html"><img src="assets/catalogue/Community midw.jpg" alt="MidWife"></a>
-        </div>
-        <div class="service-body">
-          <h4 class="service-title"><a href="CommunityMidWife.html">Community MidWife</a></h4>
-        </div>
+      <div class="service-body">
+        <h4 class="service-title"><a href="nursing.htm">Bachelor of Science in Nursing</a></h4>
       </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-12 text-center">
-      <nav class="pagination-area">
-        <!-- Pagination (add if needed) -->
-      </nav>
+  <!-- Doctor of Pharmacy -->
+  <div class="col-sm-6 col-md-6 col-lg-4 mix filter-vaccine">
+    <div class="service-item">
+      <div class="service-img">
+        <a href="Pharm. D.html"><img src="assets/catalogue/phramd.jpg" alt="Pharm-D"></a>
+      </div>
+      <div class="service-body">
+        <h4 class="service-title"><a href="Pharm. D.html">Doctor of Pharmacy (Pharm-D)</a></h4>
+      </div>
     </div>
   </div>
+
+  <!-- Medical Lab Tech -->
+  <div class="col-sm-6 col-md-6 col-lg-4 mix filter-pediatric">
+    <div class="service-item">
+      <div class="service-img">
+        <a href="BsLaboratory.html"><img src="assets/catalogue/Mediacal lab tech.jpg" alt="Lab Tech"></a>
+      </div>
+      <div class="service-body">
+        <h4 class="service-title"><a href="BsLaboratory.html">BS Medical and Lab Technology</a></h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Anesthesia -->
+  <div class="col-sm-6 col-md-6 col-lg-4 mix filter-drug">
+    <div class="service-item">
+      <div class="service-img">
+        <a href="BS Anaesthesia.html"><img src="assets/catalogue/anesthisa.jpg" alt="Anesthesia"></a>
+      </div>
+      <div class="service-body">
+        <h4 class="service-title"><a href="BS Anaesthesia.html">BS Anesthesia</a></h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pharmacy Technician -->
+  <div class="col-sm-6 col-md-6 col-lg-4 mix filter-surgery">
+    <div class="service-item">
+      <div class="service-img">
+        <a href="Pharm tech B.html"><img src="assets/catalogue/phram tech.jpg" alt="Pharmacy Tech"></a>
+      </div>
+      <div class="service-body">
+        <h4 class="service-title"><a href="Pharm tech B.html">Pharmacy Technician CAT-B</a></h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lady Health Visitor -->
+  <div class="col-sm-6 col-md-6 col-lg-4 mix filter-medical">
+    <div class="service-item">
+      <div class="service-img">
+        <a href="ladyHealthVisitor.html"><img src="assets/catalogue/lhv.jpg" alt="Lady Health Visitor"></a>
+      </div>
+      <div class="service-body">
+        <h4 class="service-title"><a href="ladyHealthVisitor.html">Lady Health Visitor</a></h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community MidWife -->
+  <div class="col-sm-6 col-md-6 col-lg-4 mix filter-MidWife">
+    <div class="service-item">
+      <div class="service-img">
+        <a href="CommunityMidWife.html"><img src="assets/catalogue/Community midw.jpg" alt="MidWife"></a>
+      </div>
+      <div class="service-body">
+        <h4 class="service-title"><a href="CommunityMidWife.html">Community MidWife</a></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Pagination or Extra Features (Optional) -->
+<div class="row">
+  <div class="col-12 text-center">
+    <nav class="pagination-area">
+      <!-- Pagination if needed -->
+    </nav>
+  </div>
+</div>
+
+<!-- ✅ Activate MixItUp -->
+<script>
+  var mixer = mixitup('#filtered-items');
+
+  // Optional: Highlight active filter
+  const filters = document.querySelectorAll('.filter');
+  filters.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      filters.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
 </section>
 
 
