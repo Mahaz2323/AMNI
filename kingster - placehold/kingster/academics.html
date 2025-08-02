@@ -3,22 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Aman Ullah Khan Medical & Nursing Institude</title>
-
     <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all' />
     <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all' />
     <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all' />
     <link href="images/amnilog (2).png" rel="icon">
     <link rel='stylesheet' href='css/style-core.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/kingster-style-custom.css' type='text/css' media='all' />
-
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700%2C400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3Aregular%2Citalic&amp;subset=latin%2Clatin-ext%2Cdevanagari&amp;ver=5.0.3' type='text/css' media='all' />
-
+    
+    <style>
+        .course-navigation {
+            background: #192f59;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .course-nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .course-nav-title {
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .course-nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .course-nav-btn {
+            background: #3db166;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .course-nav-btn:hover, .course-nav-btn.active {
+            background: #2a8a4a;
+            transform: translateY(-2px);
+        }
+        
+        .course-section {
+            padding: 60px 0;
+            margin: 20px 0;
+        }
+        
+        .course-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .course-section-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #192f59;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #3db166;
+            padding-bottom: 15px;
+        }
+        
+        .course-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .course-card h3 {
+            color: #192f59;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .course-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .course-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+        
+        .course-features li:before {
+            content: "✓";
+            color: #3db166;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        @media (max-width: 768px) {
+            .course-nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .course-nav-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js tribe-no-js kingster-body kingster-body-front kingster-full  kingster-with-sticky-navigation  kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
+    <!-- Mobile Header -->
     <div class="kingster-mobile-header-wrap">
         <div class="kingster-mobile-header kingster-header-background kingster-style-slide kingster-sticky-mobile-navigation " id="kingster-mobile-header">
             <div class="kingster-mobile-header-container kingster-container clearfix">
@@ -45,77 +182,34 @@
                     <div class="kingster-mobile-menu"><a class="kingster-mm-menu-button kingster-mobile-menu-button kingster-mobile-button-hamburger" href="#kingster-mobile-menu"><span></span></a>
                         <div class="kingster-mm-menu-wrap kingster-navigation-font" id="kingster-mobile-menu" data-slide="right">
                             <ul id="menu-main-navigation" class="m-menu">
-                                <li class="menu-item menu-item-home menu-item-has-children"><a href="index.html">Home</a>
-                                </li>
-                                <li class="menu-item menu-item-home menu-item-has-children"><a href="about-us.html">About Us</a>
-                                </li>
-                                <li class="menu-item menu-item-has-children"><a href="admission.html">Admissions</a>
+                                <li class="menu-item menu-item-home menu-item-has-children"><a href="index.html">Home</a></li>
+                                <li class="menu-item menu-item-home menu-item-has-children"><a href="about-us.html">About Us</a></li>
+                                <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="admission.html" class="sf-with-ul-pre">Admissions</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="#">AMNI College Of Pharmacy</a></li>
+                                        <li class="menu-item"><a href="#">AMNI College of Nursing</a></li>
+                                        <li class="menu-item"><a href="#">AMNI College of Allied Health Sciences</a></li>
+                                    </ul>
                                 </li>
                                 <li class="menu-item  current-menu-item menu-item-has-children"><a href="academics.html">Academics</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="#bs-nursing">BS Nursing</a></li>
+                                        <li class="menu-item"><a href="#pharm-d">Doctor of Pharmacy (Pharm-D)</a></li>
+                                        <li class="menu-item"><a href="#bs-mlt">BS Medical Lab Technology</a></li>
+                                        <li class="menu-item"><a href="#bs-anesthesia">BS Anesthesia</a></li>
+                                        <li class="menu-item"><a href="#pharmacy-tech">Pharmacy Technician (Category B)</a></li>
+                                        <li class="menu-item"><a href="#lhv">Diploma in Lady Health Visitor (LHV)</a></li>
+                                        <li class="menu-item"><a href="#cmw">Diploma in Community Midwife (CMW)</a></li>
+                                    </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children"><a href="#">Campuses</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="#">Campus 1</a></li>
-                                        <li class="menu-item"><a href="#">Campus 2</a></li>
+                                        <li class="menu-item"><a href="#">Abbottabad</a></li>
+                                        <li class="menu-item"><a href="#">Manshera</a></li>
+                                        <li class="menu-item"><a href="#">Nowshera</a><li>
                                     </ul>
                                 </li>
-                                <li class="menu-item menu-item-has-children"><a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item menu-item-has-children"><a href="blog-full-right-sidebar-with-frame.html">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item menu-item-has-children"><a href="blog-grid-3-columns-no-space.html">Blog Grid</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="menu-item"><a href="blog-grid-2-columns.html">Blog Grid 2 Columns</a></li>
-                                                        <li class="menu-item"><a href="blog-grid-3-columns.html">Blog Grid 3 Columns</a></li>
-                                                        <li class="menu-item"><a href="blog-grid-4-columns.html">Blog Grid 4 Columns</a></li>
-                                                        <li class="menu-item"><a href="blog-grid-2-columns-no-space.html">Blog Grid 2 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="blog-grid-3-columns-no-space.html">Blog Grid 3 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="blog-grid-4-columns-no-space.html">Blog Grid 4 Columns No Space</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item"><a href="standard-post-type.html">Single Post</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item menu-item-has-children"><a href="portfolio-3-columns.html">Portfolio</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item menu-item-has-children"><a>Portfolio Grid</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="menu-item"><a href="portfolio-2-columns.html">Portfolio 2 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-3-columns.html">Portfolio 3 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-4-columns.html">Portfolio 4 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-5-columns.html">Portfolio 5 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-2-columns-with-frame.html">Portfolio 2 Columns With Frame</a></li>
-                                                        <li class="menu-item"><a href="portfolio-3-columns-with-frame.html">Portfolio 3 Columns With Frame</a></li>
-                                                        <li class="menu-item"><a href="portfolio-4-columns-with-frame.html">Portfolio 4 Columns With Frame</a></li>
-                                                        <li class="menu-item"><a href="portfolio-2-columns-no-space.html">Portfolio 2 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="portfolio-3-columns-no-space.html">Portfolio 3 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="portfolio-4-columns-no-space.html">Portfolio 4 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="portfolio-5-columns-no-space.html">Portfolio 5 Columns No Space</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item menu-item-has-children"><a>Portfolio Masonry</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="menu-item"><a href="portfolio-masonry-4-columns.html">Masonry 4 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-masonry-3-columns.html">Masonry 3 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-masonry-2-columns.html">Masonry 2 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-masonry-4-columns-no-space.html">Masonry 4 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="portfolio-masonry-3-columns-no-space.html">Masonry 3 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="portfolio-masonry-2-columns-no-space.html">Masonry 2 Columns No Space</a></li>
-                                                    </ul>
-                                                </li>
-
-                                                <li class="menu-item menu-item-has-children"><a class="sf-with-ul-pre" href="singleportfolio.html">Single Portfolio</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item"><a href="gallery.html">Gallery</a></li>
-                                        <li class="menu-item"><a href="price-table.html">Price Table</a></li>
-                                        <li class="menu-item"><a href="maintenance.html">Maintenance</a></li>
-                                        <li class="menu-item"><a href="coming-soon.html">Coming Soon</a></li>
-                                        <li class="menu-item"><a href="404.html">404 Page</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-has-children"><a href="contact.html">Contact</a>
-                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -123,8 +217,10 @@
             </div>
         </div>
     </div>
+    
     <div class="kingster-body-outer-wrapper ">
         <div class="kingster-body-wrapper clearfix  kingster-with-frame">
+            <!-- Desktop Header -->
             <header class="kingster-header-wrap kingster-header-style-plain  kingster-style-menu-right kingster-sticky-navigation kingster-style-fixed" data-navigation-offset="75px">
                 <div class="kingster-header-background"></div>
                 <div class="kingster-header-container  kingster-container">
@@ -137,21 +233,32 @@
                         <div class="kingster-navigation kingster-item-pdlr clearfix ">
                             <div class="kingster-main-menu" id="kingster-main-menu">
                                 <ul id="menu-main-navigation-1" class="sf-menu">
-                                    <li class="menu-item menu-item-home menu-item-has-children kingster-normal-menu"><a href="index.html" class="sf-with-ul-pre">Home</a>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="about-us.html" class="sf-with-ul-pre">About</a>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children kingster-mega-menu"><a href="admission.html" class="sf-with-ul-pre">Admissions</a>
-                                        <div class="sf-mega sf-mega-full megaimg">
-                                        </div>
+                                    <li class="menu-item menu-item-home menu-item-has-children kingster-normal-menu"><a href="index.html" class="sf-with-ul-pre">Home</a></li>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="about-us.html" class="sf-with-ul-pre">About</a></li>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="admission.html" class="sf-with-ul-pre">Admissions</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="#">AMNI College Of Pharmacy</a></li>
+                                            <li class="menu-item"><a href="#">AMNI College of Nursing</a></li>
+                                            <li class="menu-item"><a href="#">AMNI College of Allied Health Sciences</a></li>
+                                        </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children  current-menu-item kingster-normal-menu"><a href="academics.html" class="sf-with-ul-pre">Academics</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="#bs-nursing">BS Nursing</a></li>
+                                            <li class="menu-item"><a href="#pharm-d">Doctor of Pharmacy (Pharm-D)</a></li>
+                                            <li class="menu-item"><a href="#bs-mlt">BS Medical Lab Technology</a></li>
+                                            <li class="menu-item"><a href="#bs-anesthesia">BS Anesthesia</a></li>
+                                            <li class="menu-item"><a href="#pharmacy-tech">Pharmacy Technician (Category B)</a></li>
+                                            <li class="menu-item"><a href="#lhv">Diploma in Lady Health Visitor (LHV)</a></li>
+                                            <li class="menu-item"><a href="#cmw">Diploma in Community Midwife (CMW)</a></li>
+                                        </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu">
                                         <a href="#" class="sf-with-ul-pre">Campuses</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item"><a href="#">Campus 1</a></li>
-                                            <li class="menu-item"><a href="#">Campus 2</a></li>
+                                            <li class="menu-item"><a href="#">Abbottabad</a></li>
+                                            <li class="menu-item"><a href="#">Manshera</a></li>
+                                            <li class="menu-item"><a href="#">Nowshera</a><li>
                                         </ul>
                                     </li>
                                     <li class="menu-item kingster-normal-menu"><a href="#">Archieve</a></li>
@@ -165,8 +272,7 @@
                 </div>
             </header>
 
-
-
+            <!-- Page Title -->
             <div class="kingster-page-title-wrap  kingster-style-medium kingster-left-align">
                 <div class="kingster-header-transparent-substitute"></div>
                 <div class="kingster-page-title-overlay"></div>
@@ -176,78 +282,318 @@
                     </div>
                 </div>
             </div>
-            <div class="kingster-page-wrapper" id="kingster-page-wrapper">
-                <div class="kingster-content-container kingster-container">
-                    <div class=" kingster-sidebar-wrap clearfix kingster-line-height-0 kingster-sidebar-style-right">
-                        <div class=" kingster-sidebar-center kingster-column-40 kingster-line-height">
-                            <div class="gdlr-core-page-builder-body">
-                                <div class="gdlr-core-pbf-wrapper ">
-                                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 40px ;">
-                                                    <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 20px ;font-weight: 600 ;">REQUIRED COURSES</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-course-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-course-style-list" style="padding-bottom: 45px ;">
-                                                    <div class="gdlr-core-course-item-list"><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >ACC101</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Introduction to Financial Accounting</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon fa fa-long-arrow-right" ></i></a></div>
-                                                    <div class="gdlr-core-course-item-list"><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >ACC201</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Introduction to Managerial Accounting</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon fa fa-long-arrow-right" ></i></a></div>
-                                                    <div class="gdlr-core-course-item-list"><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >ACC402</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Intermediate Accounting I</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon fa fa-long-arrow-right" ></i></a></div>
-                                                    <div class="gdlr-core-course-item-list"><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >ACC302</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Contemporary Accounting Topics</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon fa fa-long-arrow-right" ></i></a></div>
-                                                    <div class="gdlr-core-course-item-list"><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >ITT203</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Introduction to Taxation</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon fa fa-long-arrow-right" ></i></a></div>
-                                                    <div class="gdlr-core-course-item-list"><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >ASC103</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Accounting Systems and Auditing</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon fa fa-long-arrow-right" ></i></a></div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 40px ;">
-                                                    <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 20px ;font-weight: 600 ;">Elective Courses</h3></div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-course-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-course-style-list">
-                                                    <div class="gdlr-core-course-item-list"><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >BPS201</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Business Processes and Controls</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon fa fa-long-arrow-right" ></i></a></div>
-                                                    <div class="gdlr-core-course-item-list"><a class="gdlr-core-course-item-link" href="#"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >CAA558</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Cost Accounting</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon fa fa-long-arrow-right" ></i></a></div>
-                                                    <div class="gdlr-core-course-item-list"><a class="gdlr-core-course-item-link" href="#course/advanced-cost-accounting-and-management/index.html"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >ACC604</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Advanced Cost Accounting and Management</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon fa fa-long-arrow-right" ></i></a></div>
-                                                    <div class="gdlr-core-course-item-list"><a class="gdlr-core-course-item-link" href="#course/auditing/index.html"><span class="gdlr-core-course-item-id gdlr-core-skin-caption" >AUD012</span><span class="gdlr-core-course-item-title gdlr-core-skin-title" >Auditing</span><i class="gdlr-core-course-item-icon gdlr-core-skin-icon fa fa-long-arrow-right" ></i></a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" kingster-sidebar-right kingster-column-20 kingster-line-height kingster-line-height">
-                            <div class="kingster-sidebar-area kingster-item-pdlr">
-                                <div id="text-18" class="widget widget_text kingster-widget">
-                                    <div class="textwidget">
-                                        <div class="gdlr-core-widget-box-shortcode " style="color: #ffffff ;padding: 30px 45px;background-color: #192f59 ;">
-                                            <div class="gdlr-core-widget-box-shortcode-content">
-                                                </p>
-                                                <h3 style="font-size: 20px; color: #fff; margin-bottom: 25px;">Department Contact Info</h3>
-                                                <p>
-                                                    <span><a style="font-size: 15px; color: #ffffff;" href="tel:+923001234567">+92-300-1234567</a></span>
-                                                    <br /> <span class="gdlr-core-space-shortcode" style="margin-top: -20px ;"></span>
-                                                    <br /> <a style="font-size: 15px; color: #ffffff;" href="mailto:info@amni.edu.pk">info@amni.edu.pk</a>
-                                                </p>
-                                                <p><span style="font-size: 16px; color: #3db166;">Mon &#8211; Fri 9:00A.M. &#8211; 5:00P.M.</span></p> <span class="gdlr-core-space-shortcode" style="margin-top: 40px ;"></span>
-                                                <h3 style="font-size: 20px; color: #fff; margin-bottom: 15px;">Social Info</h3>
-                                                <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" style="padding-bottom: 0px ;"><a href="#url" target="_blank" class="gdlr-core-social-network-icon" title="facebook" style="color: #3db166 ;"><i class="fa fa-facebook" ></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="google-plus" style="color: #3db166 ;"><i class="fa fa-google-plus" ></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin" style="color: #3db166 ;"><i class="fa fa-linkedin" ></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="skype" style="color: #3db166 ;"><i class="fa fa-skype" ></i></a><a href="#url" target="_blank" class="gdlr-core-social-network-icon" title="twitter" style="color: #3db166 ;"><i class="fa fa-twitter" ></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="instagram" style="color: #3db166 ;"><i class="fa fa-instagram" ></i></a></div> <span class="gdlr-core-space-shortcode" style="margin-top: 40px ;"></span> <a class="gdlr-core-button gdlr-core-button-shortcode  gdlr-core-button-gradient gdlr-core-button-no-border" href="#" style="padding: 16px 27px 18px;margin-right: 20px;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;"><span class="gdlr-core-content" >Student Resources</span></a>
-                                                <p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+            <!-- Course Navigation -->
+            <div class="course-navigation">
+                <div class="course-nav-container">
+                    <h2 class="course-nav-title">Our Academic Programs</h2>
+                    <div class="course-nav-buttons">
+                        <a href="#bs-nursing" class="course-nav-btn">BS Nursing</a>
+                        <a href="#pharm-d" class="course-nav-btn">Doctor of Pharmacy (Pharm-D)</a>
+                        <a href="#bs-mlt" class="course-nav-btn">BS Medical Lab Technology</a>
+                        <a href="#bs-anesthesia" class="course-nav-btn">BS Anesthesia</a>
+                        <a href="#pharmacy-tech" class="course-nav-btn">Pharmacy Technician</a>
+                        <a href="#lhv" class="course-nav-btn">Diploma LHV</a>
+                        <a href="#cmw" class="course-nav-btn">Diploma CMW</a>
                     </div>
                 </div>
             </div>
 
-    <footer>
+            <div class="kingster-page-wrapper smooth-scroll" id="kingster-page-wrapper">
+                <div class="kingster-content-container kingster-container">
+                    
+                    <!-- BS Nursing Section -->
+                    <section id="bs-nursing" class="course-section">
+                        <div class="course-content">
+                            <h2 class="course-section-title">BS Nursing</h2>
+                            <div class="course-grid">
+                                <div class="course-card">
+                                    <h3>Program Overview</h3>
+                                    <p>The Bachelor of Science in Nursing (BSN) program is designed to prepare students for professional nursing practice. This comprehensive program combines theoretical knowledge with practical clinical experience.</p>
+                                    <ul class="course-features">
+                                        <li>Duration: 4 Years (8 Semesters)</li>
+                                        <li>Credit Hours: 132</li>
+                                        <li>Clinical Training: 2000+ Hours</li>
+                                        <li>Accreditation: Pakistan Nursing Council</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Career Opportunities</h3>
+                                    <p>Graduates can work in various healthcare settings including hospitals, clinics, community health centers, and educational institutions.</p>
+                                    <ul class="course-features">
+                                        <li>Registered Nurse (RN)</li>
+                                        <li>Clinical Nurse Specialist</li>
+                                        <li>Nurse Educator</li>
+                                        <li>Public Health Nurse</li>
+                                        <li>Nurse Administrator</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Admission Requirements</h3>
+                                    <p>To be eligible for admission, candidates must meet the following criteria:</p>
+                                    <ul class="course-features">
+                                        <li>F.Sc. Pre-Medical (60% marks)</li>
+                                        <li>Age: 17-25 years</li>
+                                        <li>Medical fitness certificate</li>
+                                        <li>English proficiency</li>
+                                        <li>Interview and aptitude test</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Doctor of Pharmacy Section -->
+                    <section id="pharm-d" class="course-section">
+                        <div class="course-content">
+                            <h2 class="course-section-title">Doctor of Pharmacy (Pharm-D)</h2>
+                            <div class="course-grid">
+                                <div class="course-card">
+                                    <h3>Program Overview</h3>
+                                    <p>The Doctor of Pharmacy (Pharm-D) program is a professional degree that prepares students for careers in pharmaceutical care, drug therapy management, and patient counseling.</p>
+                                    <ul class="course-features">
+                                        <li>Duration: 5 Years (10 Semesters)</li>
+                                        <li>Credit Hours: 180</li>
+                                        <li>Clinical Rotations: 1500+ Hours</li>
+                                        <li>Accreditation: Pharmacy Council of Pakistan</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Career Opportunities</h3>
+                                    <p>Pharm-D graduates have diverse career options in pharmaceutical industry, healthcare, research, and academia.</p>
+                                    <ul class="course-features">
+                                        <li>Clinical Pharmacist</li>
+                                        <li>Hospital Pharmacist</li>
+                                        <li>Pharmaceutical Researcher</li>
+                                        <li>Drug Safety Specialist</li>
+                                        <li>Pharmacy Manager</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Admission Requirements</h3>
+                                    <p>Eligibility criteria for Pharm-D program:</p>
+                                    <ul class="course-features">
+                                        <li>F.Sc. Pre-Medical (60% marks)</li>
+                                        <li>Age: 17-25 years</li>
+                                        <li>Medical fitness certificate</li>
+                                        <li>English proficiency</li>
+                                        <li>Pharmacy aptitude test</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- BS Medical Lab Technology Section -->
+                    <section id="bs-mlt" class="course-section">
+                        <div class="course-content">
+                            <h2 class="course-section-title">BS Medical Lab Technology</h2>
+                            <div class="course-grid">
+                                <div class="course-card">
+                                    <h3>Program Overview</h3>
+                                    <p>The BS Medical Lab Technology program trains students in laboratory procedures, diagnostic testing, and medical research techniques essential for healthcare diagnosis.</p>
+                                    <ul class="course-features">
+                                        <li>Duration: 4 Years (8 Semesters)</li>
+                                        <li>Credit Hours: 130</li>
+                                        <li>Laboratory Training: 1800+ Hours</li>
+                                        <li>Accreditation: Allied Health Council</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Career Opportunities</h3>
+                                    <p>Medical lab technologists work in diagnostic laboratories, hospitals, research institutions, and public health facilities.</p>
+                                    <ul class="course-features">
+                                        <li>Medical Laboratory Technologist</li>
+                                        <li>Clinical Laboratory Scientist</li>
+                                        <li>Research Assistant</li>
+                                        <li>Quality Control Specialist</li>
+                                        <li>Laboratory Supervisor</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Admission Requirements</h3>
+                                    <p>Requirements for BS Medical Lab Technology:</p>
+                                    <ul class="course-features">
+                                        <li>F.Sc. Pre-Medical (55% marks)</li>
+                                        <li>Age: 17-25 years</li>
+                                        <li>Medical fitness certificate</li>
+                                        <li>Basic computer skills</li>
+                                        <li>Laboratory aptitude test</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- BS Anesthesia Section -->
+                    <section id="bs-anesthesia" class="course-section">
+                        <div class="course-content">
+                            <h2 class="course-section-title">BS Anesthesia</h2>
+                            <div class="course-grid">
+                                <div class="course-card">
+                                    <h3>Program Overview</h3>
+                                    <p>The BS Anesthesia program prepares students to assist anesthesiologists in surgical procedures, pain management, and critical care settings.</p>
+                                    <ul class="course-features">
+                                        <li>Duration: 4 Years (8 Semesters)</li>
+                                        <li>Credit Hours: 135</li>
+                                        <li>Clinical Training: 2200+ Hours</li>
+                                        <li>Accreditation: Allied Health Council</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Career Opportunities</h3>
+                                    <p>Anesthesia technologists work in operating rooms, intensive care units, and pain management clinics.</p>
+                                    <ul class="course-features">
+                                        <li>Anesthesia Technologist</li>
+                                        <li>Operating Room Technician</li>
+                                        <li>Critical Care Assistant</li>
+                                        <li>Pain Management Technician</li>
+                                        <li>Emergency Care Specialist</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Admission Requirements</h3>
+                                    <p>Eligibility criteria for BS Anesthesia:</p>
+                                    <ul class="course-features">
+                                        <li>F.Sc. Pre-Medical (60% marks)</li>
+                                        <li>Age: 17-25 years</li>
+                                        <li>Medical fitness certificate</li>
+                                        <li>Physical stamina assessment</li>
+                                        <li>Technical aptitude test</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Pharmacy Technician Section -->
+                    <section id="pharmacy-tech" class="course-section">
+                        <div class="course-content">
+                            <h2 class="course-section-title">Pharmacy Technician (Category B)</h2>
+                            <div class="course-grid">
+                                <div class="course-card">
+                                    <h3>Program Overview</h3>
+                                    <p>The Pharmacy Technician program trains students to assist pharmacists in medication dispensing, inventory management, and patient care services.</p>
+                                    <ul class="course-features">
+                                        <li>Duration: 2 Years (4 Semesters)</li>
+                                        <li>Credit Hours: 70</li>
+                                        <li>Practical Training: 800+ Hours</li>
+                                        <li>Accreditation: Pharmacy Council of Pakistan</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Career Opportunities</h3>
+                                    <p>Pharmacy technicians work in retail pharmacies, hospitals, and pharmaceutical companies.</p>
+                                    <ul class="course-features">
+                                        <li>Pharmacy Technician</li>
+                                        <li>Hospital Pharmacy Assistant</li>
+                                        <li>Retail Pharmacy Staff</li>
+                                        <li>Pharmaceutical Sales Representative</li>
+                                        <li>Inventory Manager</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Admission Requirements</h3>
+                                    <p>Requirements for Pharmacy Technician program:</p>
+                                    <ul class="course-features">
+                                        <li>Matriculation (Science) with 50% marks</li>
+                                        <li>Age: 16-25 years</li>
+                                        <li>Medical fitness certificate</li>
+                                        <li>Basic mathematics skills</li>
+                                        <li>Interview and aptitude test</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- LHV Section -->
+                    <section id="lhv" class="course-section">
+                        <div class="course-content">
+                            <h2 class="course-section-title">Diploma in Lady Health Visitor (LHV)</h2>
+                            <div class="course-grid">
+                                <div class="course-card">
+                                    <h3>Program Overview</h3>
+                                    <p>The LHV diploma program prepares female healthcare workers to provide maternal and child health services in community settings.</p>
+                                    <ul class="course-features">
+                                        <li>Duration: 2 Years (4 Semesters)</li>
+                                        <li>Credit Hours: 65</li>
+                                        <li>Community Training: 600+ Hours</li>
+                                        <li>Accreditation: Pakistan Nursing Council</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Career Opportunities</h3>
+                                    <p>LHV graduates work in community health centers, maternal and child health programs, and rural healthcare facilities.</p>
+                                    <ul class="course-features">
+                                        <li>Lady Health Visitor</li>
+                                        <li>Community Health Worker</li>
+                                        <li>Maternal Health Specialist</li>
+                                        <li>Child Health Coordinator</li>
+                                        <li>Family Planning Counselor</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Admission Requirements</h3>
+                                    <p>Eligibility criteria for LHV program:</p>
+                                    <ul class="course-features">
+                                        <li>Matriculation with 50% marks</li>
+                                        <li>Age: 16-30 years (Female only)</li>
+                                        <li>Medical fitness certificate</li>
+                                        <li>Community service interest</li>
+                                        <li>Interview and aptitude test</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CMW Section -->
+                    <section id="cmw" class="course-section">
+                        <div class="course-content">
+                            <h2 class="course-section-title">Diploma in Community Midwife (CMW)</h2>
+                            <div class="course-grid">
+                                <div class="course-card">
+                                    <h3>Program Overview</h3>
+                                    <p>The CMW diploma program trains students to provide safe maternal and newborn care services in community and healthcare settings.</p>
+                                    <ul class="course-features">
+                                        <li>Duration: 2 Years (4 Semesters)</li>
+                                        <li>Credit Hours: 68</li>
+                                        <li>Clinical Training: 700+ Hours</li>
+                                        <li>Accreditation: Pakistan Nursing Council</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Career Opportunities</h3>
+                                    <p>CMW graduates work in maternity units, community health centers, and rural healthcare facilities.</p>
+                                    <ul class="course-features">
+                                        <li>Community Midwife</li>
+                                        <li>Maternity Care Assistant</li>
+                                        <li>Neonatal Care Specialist</li>
+                                        <li>Maternal Health Educator</li>
+                                        <li>Family Planning Worker</li>
+                                    </ul>
+                                </div>
+                                <div class="course-card">
+                                    <h3>Admission Requirements</h3>
+                                    <p>Requirements for CMW program:</p>
+                                    <ul class="course-features">
+                                        <li>Matriculation with 50% marks</li>
+                                        <li>Age: 16-30 years (Female only)</li>
+                                        <li>Medical fitness certificate</li>
+                                        <li>Interest in maternal care</li>
+                                        <li>Interview and aptitude test</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
                 <div class="kingster-footer-wrapper ">
                     <div class="kingster-footer-container kingster-container clearfix">
                         <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
@@ -335,8 +681,8 @@
         </div>
     </div>
 
-
-	<script type='text/javascript' src='js/jquery/jquery.js'></script>
+    <!-- Scripts -->
+    <script type='text/javascript' src='js/jquery/jquery.js'></script>
     <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
     <script type='text/javascript' src='plugins/goodlayers-core/plugins/combine/script.js'></script>
     <script type='text/javascript'>
@@ -357,5 +703,68 @@
         };
     </script>
     <script type='text/javascript' src='js/plugins.min.js'></script>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('.course-nav-btn, .sub-menu a[href^="#"]');
+            
+            // Add click event listener to each link
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        // Calculate offset for fixed header
+                        const headerHeight = document.querySelector('.kingster-header-wrap').offsetHeight;
+                        const navHeight = document.querySelector('.course-navigation').offsetHeight;
+                        const totalOffset = headerHeight + navHeight + 20;
+                        
+                        // Smooth scroll to target section
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Adjust scroll position to account for fixed header
+                        setTimeout(() => {
+                            window.scrollBy(0, -totalOffset);
+                        }, 100);
+                    }
+                });
+            });
+            
+            // Highlight active section in navigation
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('.course-section');
+                const navButtons = document.querySelectorAll('.course-nav-btn');
+                
+                let current = '';
+                const headerHeight = document.querySelector('.kingster-header-wrap').offsetHeight;
+                const navHeight = document.querySelector('.course-navigation').offsetHeight;
+                const totalOffset = headerHeight + navHeight + 50;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - totalOffset;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('href') === '#' + current) {
+                        btn.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-</html>
+</html> 

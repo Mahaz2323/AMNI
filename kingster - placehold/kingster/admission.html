@@ -3,22 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Aman Ullah Khan Medical & Nursing Institude</title>
-
+    <title>AMNI College of Nursing - Admissions</title>
     <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all' />
     <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all' />
     <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all' />
     <link href="images/amnilog (2).png" rel="icon">
     <link rel='stylesheet' href='css/style-core.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/kingster-style-custom.css' type='text/css' media='all' />
-
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700%2C400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3Aregular%2Citalic&amp;subset=latin%2Clatin-ext%2Cdevanagari&amp;ver=5.0.3' type='text/css' media='all' />
-
+    
+    <style>
+        .admission-navigation {
+            background: #1b2945;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .admission-nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .admission-nav-title {
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .admission-nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .admission-nav-btn {
+            background: #50bd77;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .admission-nav-btn:hover, .admission-nav-btn.active {
+            background: #3db166;
+            transform: translateY(-2px);
+        }
+        
+        .admission-section {
+            padding: 60px 0;
+            margin: 20px 0;
+        }
+        
+        .admission-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .admission-section-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1b2945;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #50bd77;
+            padding-bottom: 15px;
+        }
+        
+        .admission-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .admission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .admission-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .admission-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .admission-card h3 {
+            color: #1b2945;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .admission-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .admission-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .admission-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+        
+        .admission-features li:before {
+            content: "✓";
+            color: #50bd77;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #1b2945 0%, #50bd77 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .hero-description {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        
+        .contact-info {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .contact-info h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-info li {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .admission-nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .admission-nav-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 
 <body class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js tribe-no-js kingster-body kingster-body-front kingster-full  kingster-with-sticky-navigation  kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
+    <!-- Mobile Header -->
     <div class="kingster-mobile-header-wrap">
         <div class="kingster-mobile-header kingster-header-background kingster-style-slide kingster-sticky-mobile-navigation " id="kingster-mobile-header">
             <div class="kingster-mobile-header-container kingster-container clearfix">
@@ -45,77 +239,34 @@
                     <div class="kingster-mobile-menu"><a class="kingster-mm-menu-button kingster-mobile-menu-button kingster-mobile-button-hamburger" href="#kingster-mobile-menu"><span></span></a>
                         <div class="kingster-mm-menu-wrap kingster-navigation-font" id="kingster-mobile-menu" data-slide="right">
                             <ul id="menu-main-navigation" class="m-menu">
-                                <li class="menu-item menu-item-home menu-item-has-children"><a href="index.html">Home</a>
-                                </li>
-                                <li class="menu-item menu-item-home menu-item-has-children"><a href="about-us.html">About Us</a>
-                                </li>
+                                <li class="menu-item menu-item-home menu-item-has-children"><a href="index.html">Home</a></li>
+                                <li class="menu-item menu-item-home menu-item-has-children"><a href="about-us.html">About Us</a></li>
                                 <li class="menu-item  current-menu-item menu-item-has-children"><a href="admission.html">Admissions</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="#pharmacy">AMNI College Of Pharmacy</a></li>
+                                        <li class="menu-item"><a href="#nursing">AMNI College of Nursing</a></li>
+                                        <li class="menu-item"><a href="#allied-health">AMNI College of Allied Health Sciences</a></li>
+                                    </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children"><a href="academics.html">Academics</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="Nursing.html">BS Nursing</a></li>
+                                        <li class="menu-item"><a href="#">Doctor of Pharmacy (Pharm-D)</a></li>
+                                        <li class="menu-item"><a href="#">BS Medical Lab Technology</a></li>
+                                        <li class="menu-item"><a href="#">BS Anesthesia</a></li>
+                                        <li class="menu-item"><a href="#">Pharmacy Technician (Category B)</a></li>
+                                        <li class="menu-item"><a href="#">Diploma in Lady Health Visitor (LHV)</a></li>
+                                        <li class="menu-item"><a href="#">Diploma in Community Midwife (CMW)</a></li>
+                                    </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children"><a href="#">Campuses</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="#">Campus 1</a></li>
-                                        <li class="menu-item"><a href="#">Campus 2</a></li>
+                                        <li class="menu-item"><a href="#">Abbottabad</a></li>
+                                        <li class="menu-item"><a href="#">Manshera</a></li>
+                                        <li class="menu-item"><a href="#">Nowshera</a><li>
                                     </ul>
                                 </li>
-                                <li class="menu-item menu-item-has-children"><a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item menu-item-has-children"><a href="blog-full-right-sidebar-with-frame.html">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item menu-item-has-children"><a href="blog-grid-3-columns-no-space.html">Blog Grid</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="menu-item"><a href="blog-grid-2-columns.html">Blog Grid 2 Columns</a></li>
-                                                        <li class="menu-item"><a href="blog-grid-3-columns.html">Blog Grid 3 Columns</a></li>
-                                                        <li class="menu-item"><a href="blog-grid-4-columns.html">Blog Grid 4 Columns</a></li>
-                                                        <li class="menu-item"><a href="blog-grid-2-columns-no-space.html">Blog Grid 2 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="blog-grid-3-columns-no-space.html">Blog Grid 3 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="blog-grid-4-columns-no-space.html">Blog Grid 4 Columns No Space</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item"><a href="standard-post-type.html">Single Post</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item menu-item-has-children"><a href="portfolio-3-columns.html">Portfolio</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item menu-item-has-children"><a>Portfolio Grid</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="menu-item"><a href="portfolio-2-columns.html">Portfolio 2 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-3-columns.html">Portfolio 3 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-4-columns.html">Portfolio 4 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-5-columns.html">Portfolio 5 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-2-columns-with-frame.html">Portfolio 2 Columns With Frame</a></li>
-                                                        <li class="menu-item"><a href="portfolio-3-columns-with-frame.html">Portfolio 3 Columns With Frame</a></li>
-                                                        <li class="menu-item"><a href="portfolio-4-columns-with-frame.html">Portfolio 4 Columns With Frame</a></li>
-                                                        <li class="menu-item"><a href="portfolio-2-columns-no-space.html">Portfolio 2 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="portfolio-3-columns-no-space.html">Portfolio 3 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="portfolio-4-columns-no-space.html">Portfolio 4 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="portfolio-5-columns-no-space.html">Portfolio 5 Columns No Space</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item menu-item-has-children"><a>Portfolio Masonry</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="menu-item"><a href="portfolio-masonry-4-columns.html">Masonry 4 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-masonry-3-columns.html">Masonry 3 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-masonry-2-columns.html">Masonry 2 Columns</a></li>
-                                                        <li class="menu-item"><a href="portfolio-masonry-4-columns-no-space.html">Masonry 4 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="portfolio-masonry-3-columns-no-space.html">Masonry 3 Columns No Space</a></li>
-                                                        <li class="menu-item"><a href="portfolio-masonry-2-columns-no-space.html">Masonry 2 Columns No Space</a></li>
-                                                    </ul>
-                                                </li>
-
-                                                <li class="menu-item menu-item-has-children"><a class="sf-with-ul-pre" href="singleportfolio.html">Single Portfolio</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item"><a href="gallery.html">Gallery</a></li>
-                                        <li class="menu-item"><a href="price-table.html">Price Table</a></li>
-                                        <li class="menu-item"><a href="maintenance.html">Maintenance</a></li>
-                                        <li class="menu-item"><a href="coming-soon.html">Coming Soon</a></li>
-                                        <li class="menu-item"><a href="404.html">404 Page</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-has-children"><a href="contact.html">Contact</a>
-                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -123,8 +274,10 @@
             </div>
         </div>
     </div>
+    
     <div class="kingster-body-outer-wrapper ">
         <div class="kingster-body-wrapper clearfix  kingster-with-frame">
+            <!-- Desktop Header -->
             <header class="kingster-header-wrap kingster-header-style-plain  kingster-style-menu-right kingster-sticky-navigation kingster-style-fixed" data-navigation-offset="75px">
                 <div class="kingster-header-background"></div>
                 <div class="kingster-header-container  kingster-container">
@@ -137,21 +290,32 @@
                         <div class="kingster-navigation kingster-item-pdlr clearfix ">
                             <div class="kingster-main-menu" id="kingster-main-menu">
                                 <ul id="menu-main-navigation-1" class="sf-menu">
-                                    <li class="menu-item menu-item-home menu-item-has-children kingster-normal-menu"><a href="index.html" class="sf-with-ul-pre">Home</a>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="about-us.html" class="sf-with-ul-pre">About</a>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children  current-menu-item kingster-mega-menu"><a href="admission.html" class="sf-with-ul-pre">Admissions</a>
-                                        <div class="sf-mega sf-mega-full megaimg">
-                                        </div>
+                                    <li class="menu-item menu-item-home menu-item-has-children kingster-normal-menu"><a href="index.html" class="sf-with-ul-pre">Home</a></li>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="about-us.html" class="sf-with-ul-pre">About</a></li>
+                                    <li class="menu-item menu-item-has-children  current-menu-item kingster-normal-menu"><a href="admission.html" class="sf-with-ul-pre">Admissions</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="#pharmacy">AMNI College Of Pharmacy</a></li>
+                                            <li class="menu-item"><a href="#nursing">AMNI College of Nursing</a></li>
+                                            <li class="menu-item"><a href="#allied-health">AMNI College of Allied Health Sciences</a></li>
+                                        </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="academics.html" class="sf-with-ul-pre">Academics</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="Nursing.html">BS Nursing</a></li>
+                                            <li class="menu-item"><a href="#">Doctor of Pharmacy (Pharm-D)</a></li>
+                                            <li class="menu-item"><a href="#">BS Medical Lab Technology</a></li>
+                                            <li class="menu-item"><a href="#">BS Anesthesia</a></li>
+                                            <li class="menu-item"><a href="#">Pharmacy Technician (Category B)</a></li>
+                                            <li class="menu-item"><a href="#">Diploma in Lady Health Visitor (LHV)</a></li>
+                                            <li class="menu-item"><a href="#">Diploma in Community Midwife (CMW)</a></li>
+                                        </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children kingster-normal-menu">
                                         <a href="#" class="sf-with-ul-pre">Campuses</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item"><a href="#">Campus 1</a></li>
-                                            <li class="menu-item"><a href="#">Campus 2</a></li>
+                                            <li class="menu-item"><a href="#">Abbottabad</a></li>
+                                            <li class="menu-item"><a href="#">Manshera</a></li>
+                                            <li class="menu-item"><a href="#">Nowshera</a><li>
                                         </ul>
                                     </li>
                                     <li class="menu-item kingster-normal-menu"><a href="#">Archieve</a></li>
@@ -165,499 +329,260 @@
                 </div>
             </header>
 
-
-
-            <div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" style="background-image: url(upload/page-title-apply.jpg) ;">
-                <div class="kingster-header-transparent-substitute"></div>
-                <div class="kingster-page-title-overlay"></div>
-                <div class="kingster-page-title-bottom-gradient"></div>
-                <div class="kingster-page-title-container kingster-container">
-                    <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 505px ;padding-bottom: 60px ;">
-                        <div class="kingster-page-caption" style="font-size: 21px ;font-weight: 400 ;letter-spacing: 0px ;">Admission</div>
-                        <h1 class="kingster-page-title" style="font-size: 48px ;font-weight: 700 ;text-transform: none ;letter-spacing: 0px ;color: #ffffff ;">Apply To Aman Ullah Khan Medical & Nursing Institude</h1></div>
-                </div>
-            </div>
-            <div class="kingster-breadcrumbs">
-                <div class="kingster-breadcrumbs-container kingster-container">
-                    <div class="kingster-breadcrumbs-item kingster-item-pdlr"> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingster." href="index.html" class="home"><span property="name">Home</span></a>
-                        <meta property="position" content="1">
-                        </span>&gt;<span property="itemListElement" typeof="ListItem"><span property="name">Apply To Aman Ullah Khan Medical & Nursing Institude</span>
-                        <meta property="position" content="2">
-                        </span>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">AMNI College of Nursing</h1>
+                    <h2 class="hero-subtitle">Admissions Open for 2025</h2>
+                    <p class="hero-description">
+                        AMNI College of Nursing is dedicated to providing high-quality nursing education and training. Located in a vibrant academic setting, the college offers a robust curriculum that combines theoretical knowledge with hands-on clinical experience, preparing students for successful careers in healthcare. Our experienced faculty are committed to mentoring and supporting students throughout their educational journey. Equipped with modern facilities and a focus on community engagement, AMNI College of Nursing empowers students to excel in nursing practice and contribute positively to the health and well-being of individuals and communities.
+                    </p>
+                    <div class="contact-info">
+                        <h4>Contact Information</h4>
+                        <ul>
+                            <li><strong>Phone:</strong> 0313-9576112</li>
+                            <li><strong>Email:</strong> amni.nowshera@amni.edu.pk</li>
+                            <li><strong>Address:</strong> Near Khyber CNG, G.T road nowshera</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-            <div class="kingster-page-wrapper" id="kingster-page-wrapper">
-                <div class="gdlr-core-page-builder-body">
-                    <div class="gdlr-core-pbf-wrapper " style="padding: 40px 0px 30px 0px;">
-                        <div class="gdlr-core-pbf-background-wrap"></div>
-                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                                <div class="gdlr-core-pbf-element">
-                                    <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
-                                        <div class="gdlr-core-title-item-title-wrap clearfix">
-                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 27px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">Detail About How To Apply</h3></div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                                                    <div class="gdlr-core-text-box-item-content" style="font-size: 17px ;text-transform: none ;">
-                                                        <p>If you are passionate about making a real difference in people’s lives and want to study at a medical and nursing institute located in the heart of the city, then Aman Ullah Khan Medical & Nursing Institute is the right choice for you.
+            </section>
 
-At our institute, we don’t rely on rigid formulas to select students. Instead, we carefully review each applicant’s academic achievements and personal qualities to build a diverse, compassionate, and capable student community. We welcome individuals from all walks of life who are dedicated to healthcare, service, and creating a better tomorrow.
-
-Join us and become part of a dynamic environment that blends academic excellence with real-world medical training preparing future nurses, paramedics, and healthcare professionals to serve with skill, empathy, and integrity.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-30">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                                                    <div class="gdlr-core-text-box-item-content" style="font-size: 17px ;text-transform: none ;">
-                                                        <p>If you would like to study at an institute located in the heart of the city one that is committed to changing the world for a better tomorrow  then you are choosing the right place.
-
-At Aman Ullah Khan Medical & Nursing Institute, we don’t use special formulas or rigid criteria to select our students. Instead, we carefully consider every part of your application  both academic and personal  to find individuals who are the right fit for our vibrant, service driven community.
-
-We are looking for passionate, caring, and committed future healthcare professionals who want to make a real difference in the lives of others.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Admission Navigation -->
+            <div class="admission-navigation">
+                <div class="admission-nav-container">
+                    <h2 class="admission-nav-title">Admission Information</h2>
+                    <div class="admission-nav-buttons">
+                        <a href="#pharmacy" class="admission-nav-btn">AMNI College of Pharmacy</a>
+                        <a href="#nursing" class="admission-nav-btn">AMNI College of Nursing</a>
+                        <a href="#allied-health" class="admission-nav-btn">AMNI College of Allied Health Sciences</a>
                     </div>
-                    <div class="gdlr-core-pbf-wrapper " style="padding: 80px 0px 40px 0px;" data-skin="Column Service">
-                        <div class="gdlr-core-pbf-background-wrap" style="background-color: #1b2945 ;"></div>
-                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                                <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-top gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 30px;">
-                                                    <div class="gdlr-core-column-service-media gdlr-core-media-image" style="margin-bottom: 35px;"><img src="upload/col-icon-1.png" alt="" width="41" height="41" title="col-icon-1" /></div>
-                                                    <div class="gdlr-core-column-service-content-wrapper">
-                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 21px ;font-weight: 700 ;text-transform: none ;">Education Services</h3></div>
-                                                        <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
-                                                            <p>Aman Ullah Khan Medical & Nursing Institute is located in the heart of the city and is dedicated to shaping a better tomorrow through quality education in healthcare. We evaluate each applicant personally and academically to build a community of skilled, compassionate, and diverse future professionals.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-15">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-top gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 30px;">
-                                                    <div class="gdlr-core-column-service-media gdlr-core-media-image" style="margin-bottom: 31px;"><img src="upload/col-icon-2.png" alt="" width="43" height="45" title="col-icon-2" /></div>
-                                                    <div class="gdlr-core-column-service-content-wrapper">
-                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 21px ;font-weight: 700 ;text-transform: none ;">International Hubs</h3></div>
-                                                        <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
-                                                                <p>Aman Ullah Khan Medical & Nursing Institute aims to build global connections by collaborating with international healthcare and academic institutions. These partnerships help our students stay updated with global medical practices and open pathways for future international opportunities.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-15">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-top gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 30px;">
-                                                    <div class="gdlr-core-column-service-media gdlr-core-media-image" style="margin-bottom: 33px;"><img src="upload/col-icon-3.png" alt="" width="40" height="43" title="col-icon-3" /></div>
-                                                    <div class="gdlr-core-column-service-content-wrapper">
-                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 21px ;font-weight: 700 ;text-transform: none ;">Bachelor’s and Master’s</h3></div>
-                                                        <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
-                                                            <p>Aman Ullah Khan Medical & Nursing Institute offers a range of undergraduate and postgraduate programs designed to equip students with the necessary skills and knowledge for a successful career in healthcare.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-15">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-top gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 30px;">
-                                                    <div class="gdlr-core-column-service-media gdlr-core-media-image" style="margin-bottom: 29px;"><img src="upload/col-icon-4.png" alt="" width="47" height="47" title="col-icon-4" /></div>
-                                                    <div class="gdlr-core-column-service-content-wrapper">
-                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 21px ;font-weight: 700 ;text-transform: none ;">University Life</h3></div>
-                                                        <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
-                                                            <p>Aman Ullah Khan Medical & Nursing Institute provides a vibrant campus life with various extracurricular activities, clubs, and organizations that promote personal growth and community engagement.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper " style="padding: 660px 0px 30px 0px;">
-                        <div class="gdlr-core-pbf-background-wrap">
-                            <div class="gdlr-core-pbf-background" style="background-image: url(upload/shutterstock_299633474.jpg) ;background-size: cover ;background-position: center ;background-attachment: fixed ;"></div>
-                        </div>
-                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container"></div>
-                        </div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper " style="padding: 90px 0px 30px 0px;">
-                        <div class="gdlr-core-pbf-background-wrap"></div>
-                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                                <div class="gdlr-core-pbf-element">
-                                    <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 45px ;">
-                                        <div class="gdlr-core-title-item-title-wrap clearfix">
-                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 27px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">The Application Process</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first" data-skin="Blut Title Column Service">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
-                                                    <div class="gdlr-core-column-service-media gdlr-core-character" style="margin-top: 5px;margin-right: 33px;margin-left: 7px;font-size: 45px ;color: #3db166 ;">1</div>
-                                                    <div class="gdlr-core-column-service-content-wrapper">
-                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 18px ;text-transform: none ;">Start Online Submission</h3></div>
-                                                        <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
-                                                            <p>Begin your journey by accessing our online application portal. Aman Ullah Khan Medical & Nursing Institute makes it easy for aspiring students to take the first step toward a rewarding healthcare career — from the comfort of their homes.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Blut Title Column Service">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
-                                                    <div class="gdlr-core-column-service-media gdlr-core-character" style="margin-top: 5px;margin-right: 28px;margin-left: 3px;font-size: 45px ;color: #3db166 ;">2</div>
-                                                    <div class="gdlr-core-column-service-content-wrapper">
-                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 18px ;text-transform: none ;">Submit The Form</h3></div>
-                                                        <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
-                                                            <p>Carefully fill out the admission form with your academic and personal information. Ensure all required fields are completed honestly, as this is the foundation of your medical and nursing education with us.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Blut Title Column Service">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
-                                                    <div class="gdlr-core-column-service-media gdlr-core-character" style="margin-top: 5px;font-size: 45px ;color: #3db166 ;">3</div>
-                                                    <div class="gdlr-core-column-service-content-wrapper">
-                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 18px ;text-transform: none ;">Review The Submission</h3></div>
-                                                        <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
-                                                            <p>Before finalizing, review your entire application thoroughly. Check for accuracy, verify your academic records, and ensure your goals align with the values of Aman Ullah Khan Medical & Nursing Institute.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first" data-skin="Blut Title Column Service">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
-                                                    <div class="gdlr-core-column-service-media gdlr-core-character" style="margin-top: 5px;font-size: 45px ;color: #3db166 ;">4</div>
-                                                    <div class="gdlr-core-column-service-content-wrapper">
-                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 18px ;text-transform: none ;">Gather Necessary Documents</h3></div>
-                                                        <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
-                                                            <p>Collect and prepare all supporting documents, such as transcripts, identity verification, recent photographs, and any certifications. Uploading the correct documents ensures a smooth evaluation process.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Blut Title Column Service">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
-                                                    <div class="gdlr-core-column-service-media gdlr-core-character" style="margin-top: 5px;font-size: 45px ;color: #3db166 ;">5</div>
-                                                    <div class="gdlr-core-column-service-content-wrapper">
-                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 18px ;text-transform: none ;">Interviewing Process</h3></div>
-                                                        <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
-                                                            <p>Shortlisted candidates will be invited for an interview. This is an opportunity to express your motivation, passion for healthcare, and how you can contribute to the community through your role in the medical field.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Blut Title Column Service">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 20px;">
-                                                    <div class="gdlr-core-column-service-media gdlr-core-character" style="margin-top: 5px;font-size: 45px ;color: #3db166 ;">6</div>
-                                                    <div class="gdlr-core-column-service-content-wrapper">
-                                                        <div class="gdlr-core-column-service-title-wrap">
-                                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 18px ;text-transform: none ;">Last Decision</h3></div>
-                                                        <div class="gdlr-core-column-service-content" style="font-size: 16px ;text-transform: none ;">
-                                                            <p>Once all steps are complete, our admissions committee will carefully evaluate your profile. Final decisions are based on academic merit, commitment to service, and alignment with our mission to train dedicated healthcare professionals.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gdlr-core-pbf-section">
-                        <div class="gdlr-core-pbf-section-container gdlr-core-container clearfix">
-                            <div class="gdlr-core-pbf-element">
-                                <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-center-align" style="margin-bottom: 15px ;">
-                                    <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #50bd77 ;border-bottom-width: 3px ;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 60px 0px 50px 0px;">
-                        <div class="gdlr-core-pbf-background-wrap"></div>
-                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                                <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 40px ;">
-                                                    <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">Things To Know First</h3></div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;">
-                                                    <div class="gdlr-core-text-box-item-content" style="font-size: 17px ;text-transform: none ;">
-                                                        <p>The Common Application is required for students applying to any or all of KU’s three degree. You&#8217;ll be able to choose your campus and program s that you are interested.</p>
-                                                        <p>You will need :</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-icon-list-item gdlr-core-item-pdlr gdlr-core-item-pdb clearfix " style="padding-bottom: 25px ;">
-                                                    <ul>
-                                                        <li class=" gdlr-core-skin-divider" style="margin-bottom: 22px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #50bd77 ;font-size: 18px ;width: 18px ;" ></i></span>
-                                                            <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;">Contact information for the counselor or other school representative who will complete your Common Application School Report and submit your official high school transcript.</span></div>
-                                                        </li>
-                                                        <li class=" gdlr-core-skin-divider" style="margin-bottom: 22px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #50bd77 ;font-size: 18px ;width: 18px ;" ></i></span>
-                                                            <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;">Contact information for one teacher (or two, maximum) who will complete the Teacher Evaluation form.</span></div>
-                                                        </li>
-                                                        <li class=" gdlr-core-skin-divider" style="margin-bottom: 22px ;"><span class="gdlr-core-icon-list-icon-wrap" style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #50bd77 ;font-size: 18px ;width: 18px ;" ></i></span>
-                                                            <div class="gdlr-core-icon-list-content-wrap"><span class="gdlr-core-icon-list-content" style="font-size: 17px ;">Nonrefundable $50 application fee. Students who are unable to pay the application fee can request a fee waiver.</span></div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="#" id="gdlr-core-button-id-11400"><span class="gdlr-core-content" >Request a campus tour</span></a><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="#" id="gdlr-core-button-id-72422"><span class="gdlr-core-content" >Request information</span></a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-30">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 40px ;">
-                                                    <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">When To Apply?</h3></div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 40px ;">
-                                                    <div class="gdlr-core-text-box-item-content" style="text-transform: none ;">
-                                                        <div style="overflow-x: auto;">
-                                                            <table style="min-width: 600px;">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th>Application Deadline</th>
-                                                                        <th>Decision</th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Early Decision 1</td>
-                                                                        <td>November 1</td>
-                                                                        <td>December 15</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Early Decision 2</td>
-                                                                        <td>January 1</td>
-                                                                        <td>February 15</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Regular Decision</td>
-                                                                        <td>January 1</td>
-                                                                        <td>April 1</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px ;">
-                                                    <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">Where to submit necessary documents?</h3></div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 0px ;">
-                                                    <div class="gdlr-core-text-box-item-content" style="font-size: 17px ;text-transform: none ;">
-                                                        <p>Documents not submitted through the online method can be mailed to:</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                                                    <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;color: #919191 ;">
-                                                        <p>Box 35300
-                                                            <br />1810 Campus Way NE
-                                                            <br />Bothell, WA 98011-8246 USA</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
-          <footer>
-                <div class="kingster-footer-wrapper ">
-                    <div class="kingster-footer-container kingster-container clearfix">
-                        <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
-                            <div id="text-2" class="widget widget_text kingster-widget">
-                                <div class="textwidget">
-                                    <p>
-                                        <img src="images/logo-white.png" alt="AMNI Logo" />
-                                        <br /> <span class="gdlr-core-space-shortcode" style="margin-top: 5px ;"></span>
-                                        <br /> Aman Ullah Khan Medical & Nursing Institute
-                                        <br /> Main Campus, Near XYZ Hospital
-                                        <br /> Peshawar, Khyber Pakhtunkhwa, Pakistan
-                                    </p>
-                                    <p>
-                                        <span><a style="font-size: 15px; color: #ffffff;" href="tel:+923001234567">+92-300-1234567</a></span>
-                                        <br /> <span class="gdlr-core-space-shortcode" style="margin-top: -20px ;"></span>
-                                        <br /> <a style="font-size: 15px; color: #ffffff;" href="mailto:info@amni.edu.pk">info@amni.edu.pk</a>
-                                    </p>
+            <div class="kingster-page-wrapper smooth-scroll" id="kingster-page-wrapper">
+                <div class="kingster-content-container kingster-container">
+                    
+                    <!-- AMNI College of Pharmacy Section -->
+                    <section id="pharmacy" class="admission-section">
+                        <div class="admission-content">
+                            <h2 class="admission-section-title">AMNI College of Pharmacy</h2>
+                            <div class="admission-grid">
+                                <div class="admission-card">
+                                    <h3>Programs Offered</h3>
+                                    <p>AMNI College of Pharmacy offers comprehensive pharmaceutical education programs:</p>
+                                    <ul class="admission-features">
+                                        <li>Doctor of Pharmacy (Pharm-D) - 5 Years</li>
+                                        <li>Pharmacy Technician (Category B) - 2 Years</li>
+                                        <li>Diploma in Pharmacy - 2 Years</li>
+                                        <li>Certificate in Pharmacy - 1 Year</li>
+                                        <li>Continuing Education Programs</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
-                            <div id="gdlr-core-custom-menu-widget-2" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                                <h3 class="kingster-widget-title">Institute Links</h3><span class="clear"></span>
-                                <div class="menu-our-campus-container">
-                                    <ul id="menu-our-campus" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item"><a href="about-us.html">About Us</a></li>
-                                        <li class="menu-item"><a href="admission.html">Admissions</a></li>
-                                        <li class="menu-item"><a href="academics.html">Academics</a></li>
-                                        <li class="menu-item"><a href="gallery.html">Gallery</a></li>
-                                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                <div class="admission-card">
+                                    <h3>Admission Requirements</h3>
+                                    <p>Eligibility criteria for pharmacy programs:</p>
+                                    <ul class="admission-features">
+                                        <li>F.Sc. Pre-Medical (60% marks minimum)</li>
+                                        <li>Age: 17-25 years</li>
+                                        <li>Medical fitness certificate</li>
+                                        <li>English proficiency test</li>
+                                        <li>Pharmacy aptitude test</li>
+                                    </ul>
+                                </div>
+                                <div class="admission-card">
+                                    <h3>Career Opportunities</h3>
+                                    <p>Graduates can work in various pharmaceutical settings:</p>
+                                    <ul class="admission-features">
+                                        <li>Clinical Pharmacist</li>
+                                        <li>Hospital Pharmacist</li>
+                                        <li>Pharmaceutical Researcher</li>
+                                        <li>Drug Safety Specialist</li>
+                                        <li>Pharmacy Manager</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
-                            <div id="gdlr-core-custom-menu-widget-3" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                                <h3 class="kingster-widget-title">Pages</h3><span class="clear"></span>
-                                <div class="menu-pages-container">
-                                    <ul id="menu-pages" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item"><a href="gallery.html">Gallery</a></li>
-                                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                    </section>
+
+                    <!-- AMNI College of Nursing Section -->
+                    <section id="nursing" class="admission-section">
+                        <div class="admission-content">
+                            <h2 class="admission-section-title">AMNI College of Nursing</h2>
+                            <div class="admission-grid">
+                                <div class="admission-card">
+                                    <h3>Programs Offered</h3>
+                                    <p>AMNI College of Nursing provides comprehensive nursing education:</p>
+                                    <ul class="admission-features">
+                                        <li>BS Nursing - 4 Years</li>
+                                        <li>Diploma in Nursing - 3 Years</li>
+                                        <li>Post RN BSN - 2 Years</li>
+                                        <li>Specialized Nursing Programs</li>
+                                        <li>Continuing Education in Nursing</li>
+                                    </ul>
+                                </div>
+                                <div class="admission-card">
+                                    <h3>Admission Requirements</h3>
+                                    <p>Eligibility criteria for nursing programs:</p>
+                                    <ul class="admission-features">
+                                        <li>F.Sc. Pre-Medical (60% marks minimum)</li>
+                                        <li>Age: 17-25 years</li>
+                                        <li>Medical fitness certificate</li>
+                                        <li>English proficiency test</li>
+                                        <li>Nursing aptitude test</li>
+                                    </ul>
+                                </div>
+                                <div class="admission-card">
+                                    <h3>Career Opportunities</h3>
+                                    <p>Nursing graduates have diverse career options:</p>
+                                    <ul class="admission-features">
+                                        <li>Registered Nurse (RN)</li>
+                                        <li>Clinical Nurse Specialist</li>
+                                        <li>Nurse Educator</li>
+                                        <li>Public Health Nurse</li>
+                                        <li>Nurse Administrator</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
-                            <div id="gdlr-core-custom-menu-widget-4" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                                <h3 class="kingster-widget-title">Programs</h3><span class="clear"></span>
-                                <div class="menu-academics-container">
-                                    <ul id="menu-academics" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item"><a href="#">MBBS</a></li>
-                                        <li class="menu-item"><a href="#">BS Nursing</a></li>
-                                        <li class="menu-item"><a href="#">Diploma in Nursing</a></li>
-                                        <li class="menu-item"><a href="#">Paramedical Courses</a></li>
-                                        <li class="menu-item"><a href="#">Apply Online</a></li>
-                                        <li class="menu-item"><a href="#">Fee Structure</a></li>
+                    </section>
+
+                    <!-- AMNI College of Allied Health Sciences Section -->
+                    <section id="allied-health" class="admission-section">
+                        <div class="admission-content">
+                            <h2 class="admission-section-title">AMNI College of Allied Health Sciences</h2>
+                            <div class="admission-grid">
+                                <div class="admission-card">
+                                    <h3>Programs Offered</h3>
+                                    <p>AMNI College of Allied Health Sciences offers various healthcare programs:</p>
+                                    <ul class="admission-features">
+                                        <li>BS Medical Lab Technology - 4 Years</li>
+                                        <li>BS Anesthesia - 4 Years</li>
+                                        <li>Diploma in LHV - 2 Years</li>
+                                        <li>Diploma in CMW - 2 Years</li>
+                                        <li>Radiology Technology - 2 Years</li>
+                                    </ul>
+                                </div>
+                                <div class="admission-card">
+                                    <h3>Admission Requirements</h3>
+                                    <p>Eligibility criteria for allied health programs:</p>
+                                    <ul class="admission-features">
+                                        <li>F.Sc. Pre-Medical (60% marks minimum)</li>
+                                        <li>Age: 17-25 years</li>
+                                        <li>Medical fitness certificate</li>
+                                        <li>English proficiency test</li>
+                                        <li>Program-specific aptitude test</li>
+                                    </ul>
+                                </div>
+                                <div class="admission-card">
+                                    <h3>Career Opportunities</h3>
+                                    <p>Allied health graduates have excellent career prospects:</p>
+                                    <ul class="admission-features">
+                                        <li>Medical Lab Technologist</li>
+                                        <li>Anesthesia Technologist</li>
+                                        <li>Lady Health Visitor</li>
+                                        <li>Community Midwife</li>
+                                        <li>Radiology Technologist</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
+
                 </div>
-                <div class="kingster-copyright-wrapper">
-                    <div class="kingster-copyright-container kingster-container clearfix">
-                        <div class="kingster-copyright-left kingster-item-pdlr">
-                            Copyright &copy; All Rights Reserved 2025, 
-                            <a href="index.html">Aman Ullah Khan Medical & Nursing Institute</a>
-                        </div>
-                        <div class="kingster-copyright-right kingster-item-pdlr">
-                            <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" style="padding-bottom: 0px ;">
-                                <a href="https://www.facebook.com/amni.Officials/" target="_blank" class="gdlr-core-social-network-icon" title="facebook">
-                                    <i class="fa fa-facebook" ></i>
-                                </a>
-                                <a href="https://www.instagram.com/amni.officials/" target="_blank" class="gdlr-core-social-network-icon" title="instagram">
-                                    <i class="fa fa-instagram" ></i>
-                                </a>
-                                <a href="https://wa.link/obqlle" target="_blank" class="gdlr-core-social-network-icon" title="whatsapp">
-                                    <i class="fa fa-whatsapp" ></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            </div>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <div class="kingster-footer-wrapper ">
+            <div class="kingster-footer-container kingster-container clearfix">
+                <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                    <div id="text-2" class="widget widget_text kingster-widget">
+                        <div class="textwidget">
+                            <p>
+                                <img src="images/logo-white.png" alt="AMNI Logo" />
+                                <br /> <span class="gdlr-core-space-shortcode" style="margin-top: 5px ;"></span>
+                                <br /> AMNI College of Nursing
+                                <br /> Near Khyber CNG, G.T road nowshera
+                                <br /> Nowshera, Khyber Pakhtunkhwa, Pakistan
+                            </p>
+                            <p>
+                                <span><a style="font-size: 15px; color: #ffffff;" href="tel:+923139576112">+92-313-9576112</a></span>
+                                <br /> <span class="gdlr-core-space-shortcode" style="margin-top: -20px ;"></span>
+                                <br /> <a style="font-size: 15px; color: #ffffff;" href="mailto:amni.nowshera@amni.edu.pk">amni.nowshera@amni.edu.pk</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                    <div id="gdlr-core-custom-menu-widget-2" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                        <h3 class="kingster-widget-title">Quick Links</h3><span class="clear"></span>
+                        <div class="menu-our-campus-container">
+                            <ul id="menu-our-campus" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                                <li class="menu-item"><a href="about-us.html">About Us</a></li>
+                                <li class="menu-item"><a href="admission.html">Admissions</a></li>
+                                <li class="menu-item"><a href="academics.html">Academics</a></li>
+                                <li class="menu-item"><a href="gallery.html">Gallery</a></li>
+                                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                    <div id="gdlr-core-custom-menu-widget-3" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                        <h3 class="kingster-widget-title">Programs</h3><span class="clear"></span>
+                        <div class="menu-pages-container">
+                            <ul id="menu-pages" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                                <li class="menu-item"><a href="Nursing.html">BS Nursing</a></li>
+                                <li class="menu-item"><a href="#">Pharm-D</a></li>
+                                <li class="menu-item"><a href="#">BS Medical Lab Technology</a></li>
+                                <li class="menu-item"><a href="#">BS Anesthesia</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                    <div id="gdlr-core-custom-menu-widget-4" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                        <h3 class="kingster-widget-title">Admissions</h3><span class="clear"></span>
+                        <div class="menu-academics-container">
+                            <ul id="menu-academics" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                                <li class="menu-item"><a href="#requirements">Requirements</a></li>
+                                <li class="menu-item"><a href="#process">Application Process</a></li>
+                                <li class="menu-item"><a href="#fees">Fee Structure</a></li>
+                                <li class="menu-item"><a href="#scholarships">Scholarships</a></li>
+                                <li class="menu-item"><a href="#important-dates">Important Dates</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kingster-copyright-wrapper">
+            <div class="kingster-copyright-container kingster-container clearfix">
+                <div class="kingster-copyright-left kingster-item-pdlr">
+                    Copyright &copy; All Rights Reserved 2025, 
+                    <a href="index.html">AMNI College of Nursing</a>
+                </div>
+                <div class="kingster-copyright-right kingster-item-pdlr">
+                    <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" style="padding-bottom: 0px ;">
+                        <a href="https://www.facebook.com/amni.Officials/" target="_blank" class="gdlr-core-social-network-icon" title="facebook">
+                            <i class="fa fa-facebook" ></i>
+                        </a>
+                        <a href="https://www.instagram.com/amni.officials/" target="_blank" class="gdlr-core-social-network-icon" title="instagram">
+                            <i class="fa fa-instagram" ></i>
+                        </a>
+                        <a href="https://wa.link/obqlle" target="_blank" class="gdlr-core-social-network-icon" title="whatsapp">
+                            <i class="fa fa-whatsapp" ></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-	<script type='text/javascript' src='js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery/jquery.js'></script>
     <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
     <script type='text/javascript' src='plugins/goodlayers-core/plugins/combine/script.js'></script>
     <script type='text/javascript'>
